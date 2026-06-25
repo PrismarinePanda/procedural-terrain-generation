@@ -1,0 +1,6 @@
+# Compiled output
+*.o
+*.out
+*.exe
+terrain
+terrain_data.csv
