@@ -1,6 +1,8 @@
 # Procedural Terrain Generation
 
-A two-semester high school independent study on procedurally generating unique 3D terrain in C++ — mountains, oceans, beaches, skies, and trees — built around the textbook *Texturing and Modeling: A Procedural Approach*.
+A high school independent study on procedurally generating unique 3D terrain in C++ — mountains, oceans, beaches, skies, and trees — built around the textbook *Texturing and Modeling: A Procedural Approach*.
+
+*This was my junior-year-of-high-school independent study (2023–24) — a long project that ran across a full school year, two semesters organized into sprints.*
 
 ## Why I did this
 
@@ -51,9 +53,16 @@ A new seed is used every run (it's printed at the top), so no two maps are the s
 | `terrain_color_wip.cpp` | A work-in-progress version where I started moving the spreadsheet's coloring rules into the C++ itself, so the program could emit colors directly instead of me re-applying conditional formatting by hand. The height-based color ramp (sand → grass → rock → snow, plus water blues) is transcribed in, but it isn't finished or wired into the output yet, so it still prints heights. Renamed from `main 2.2.cp`. |
 | `sky.cpp` | A separate generator for sky/clouds — same noise + smooth-step, with amplitude scaled down lower in the frame so there are fewer clouds near the horizon. Renamed from `main_sky.cp`. |
 | `tree.scad` | Recursive fractal tree in OpenSCAD (second semester). Renamed from `tree2.scad`. |
-| `terrain-heightmaps.xlsx` | The visualizations — one sheet per generated map, each named for its biome layout. |
-| `sky.xlsx` | Sky generator output, visualized the same way. |
-| `docs/` | Proposal, study plans, sprint schedules, reflections, and presentations. |
+| `terrain-heightmaps.xlsx` | My display for the terrain. Each sheet is one generated map: I pasted the program's height output in and used conditional formatting to color the cells by height, so it reads as a map. This is the "renderer" described above. Sheet names encode that map's biome layout. |
+| `sky.xlsx` | The sky generator's output, colored the same way. |
+| `docs/` | The proposal and the presentations I gave during the project — see Documents below. |
+
+## Documents
+
+The `docs/` folder holds the materials I made over the course of the year. It helps to know what each one is — and isn't:
+
+- **Project proposal** (`project-proposal.docx`) — the plan I wrote at the very beginning, *before I'd written any code*. It's a wishlist of everything I hoped to do, including a bunch of stretch goals (global warming sims, AI pathfinding, importing into Unity) that I never got to. Read it as "where I started," not a description of what I built.
+- **Presentations** (`midterm-presentation.pptx`, `wics-presentation.pptx`) — informal talks I gave partway through, explaining the concepts and showing progress. They're casual and a little rough (lots of "here's the part I didn't finish yet"). The midterm deck is the earlier checkpoint; the WiCS+ presentation (given at a Women in Computer Science event) is the updated version, with the trees and some actual renders. They overlap a lot, so the WiCS+ one on its own covers most of it.
 
 ## Semester two additions
 
